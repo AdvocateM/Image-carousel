@@ -15,23 +15,23 @@ pictures = [
   "https://i.ibb.co/PTpJS2Q/post25.jpg"
 ];
 let element_pictures = document.getElementById("pictures");
-element_pictures.setAttribute("src", pictures[0]);
-count = 0;
+element_pictures.setAttribute("src", pictures[1]);
+count = 1;
 
 document.getElementById("next").addEventListener("click", (event) => {
   pictures.push(pictures.shift());
   let element_pictures2 = document.getElementById("pictures");
-  element_pictures2.setAttribute("src", pictures[0]);
+  element_pictures2.setAttribute("src", pictures[1]);
   let element_number = document.getElementById("number");
-  count = (typeof count === "number" ? count : 0) + 1;
+  count = (typeof count === "number" ? count : 1) + 1;
   element_number.innerText = count;
 });
 
 document.getElementById("previous").addEventListener("click", (event) => {
   pictures.unshift(pictures.pop());
   let element_pictures3 = document.getElementById("pictures");
-  element_pictures3.setAttribute("src", pictures[0]);
+  element_pictures3.setAttribute("src", pictures[1]);
   let element_number2 = document.getElementById("number");
-  count = (typeof count === "number" ? count : 0) + -1;
+  count = (typeof count === "number" ? count : 1) + -1;
   element_number2.innerText = count;
 });
